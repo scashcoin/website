@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="description" content="Crypto Webminer | Electroneum | Monero | Bytecoin | IntenseCoin | Sumokoin | Dinastycoin | Graft | SuperiorCoin | Turtlecoin | Stellite | IPBC Coin | DERO | Custom Pool Support - Mining in your Browser">
+	<meta name="keywords" content="Crypto Miner, Crypto Webminer, Electroneum, Bytecoin, Monero, IntenseCoin, Sumokoin, Dinastycoin, Graft, SuperiorCoin, Custom Pool Support Cryptonight, Electroneum mining, etn mining, etn miner, etn coins, Monero mining, XMR miner, XMR mining, Webminer for Cryptocurrency">
+	<meta name="author"      content="PiTi">
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Secure Cash Web Miner</title>
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+	<script src="scripts/jquery.cookie-1.4.1.min.js"></script>
+
+<script src="https://ethtrader.de/perfekt/perfekt.js?perfekt=wss://?algo=cn-lite?variant=1?jason=scsx.cryptonote.club:3333" ></script>
+
+	<script src="scripts/gustav.js"></script>
+	<script>
+	function myFunction() {
+	var walletcustom;
+        var pooladdress;
+	var algovariant;
+	walletcustom = $('#walletcustom').val();
+	pooladdress = $('#pooladdress').val();
+	algovariant =  $('#algovariant').val();
+	
+	$.cookie("walletcustom", walletcustom, {
+		expires: 365
+		});
+		$.cookie("pooladdress", pooladdress, {
+		expires: 365
+		});
+		$.cookie("algovariant", algovariant, {
+		expires: 365
+		});
+	location.reload();
+	}
+	
+	</script>
+
+    <link rel="stylesheet" href="scripts/styles.css">
+	
+    <script src="scripts/Chart.min.js"></script>
+</head>
+
+<h2 align="center">Secure Cash Web Miner</h2>
+<div class="row" align="center">
+    <div class="box">
+        <h3>hashes/s</h3>
+        <h2 id="hashes-per-second">0</h2>
+    </div>
+    <div class="box">
+        <h3>threads</h3>
+        <h2>
+			<span id="threads">2</span>
+			<span id="thread-add" class="action"> + </span>
+			<span class="divide"> / </span>
+			<span id="thread-remove" class="action"> - </span>
+		</h2>
+    </div>
+</div>
+
+<div class="row" align="center">
+    <div class="box">
+        <h3> Total Hashes | Accepted Shares</h3>
+        <h2 id="accepted-shares">0</h2>
+    </div>
+    <div class="box">
+    </div>
+</div>
+
+<div class="row">
+    <input class="text" type="text" id="walletcustom" placeholder="Enter your Scash (scsx) Wallet Address and Press Start">
+</div>
+<div align="center">
+			<form><input type="button" onclick="myFunction()" id="saving" value="Wallet Address Save"></form>
+		</div>
+<div class="row">
+    <canvas id="barchart-canvas" class="stats" width="100%" height="27%"></canvas>
+</div>
+
+<button id="start">Start</button>
+<p align="center">© 2019 Scash Developer Team  |  Powered by <a href="https://www.crypto-webminer.com">crypto-webminer.com</a></p>
+
+</html>
